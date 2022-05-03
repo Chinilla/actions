@@ -12,6 +12,10 @@ Cleans the current workspace prior to running the checkout action, to ensure the
 ## enforce-semver
 Ensures that the checked-out code has a GitHub tag that complies with semantic versioning in format `Major.minor.patch`. Supports up to three numeric digits per release type.
 
+## git-mark-workspace-safe
+Marks the GitHub workspace as safe. See [bug report](https://github.com/actions/checkout/issues/760)
+The underlying checkout issue is resolved, but if you need to commit back to a repo, especially in a container, this action is still needed.
+
 ## git-ssh-to-https
 Sets up the global git config to replace any ssh clone URLs with HTTPS URLs. This must be used after the checkout code action.
 
@@ -19,17 +23,34 @@ Sets up the global git config to replace any ssh clone URLs with HTTPS URLs. Thi
 
 
 ## helm/deploy
-
+Deploys a helm chart to a k8s cluster.
 
 ## k8s/image-pull-secret
+Creates/updates a kubernetes image pull secret in a namespace.
 
+## setup-python
+Wrapper around actions/setup-python that also supports ARM64 Mac and ARM64 Linux.
 
 ## sign/windows
+Windows Codesigning. Signs a file with a cert for windows.
 
+## terraform/plan
+Runs terraform plan and shows the output.
 
-## terraform
+## terraform/apply
+Runs terraform apply.
 
+## terraform/destroy
+Runs terraform destroy.
 
-## vault
+## vault/login
+Log in to the vault server using the jwt token and set env vars, to be able to use other vault actions.
 
+## vault/aws-sts
+Get ephemeral AWS credentials from Vault
 
+## vault/k8s-login
+Log in to a k8s cluster, using a certificate issued by vault signed by the same CA k8s uses.
+
+## vault/signed-ssh-key
+Generate a new ssh key and have vault sign it with the SSH CA
