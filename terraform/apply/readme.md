@@ -5,10 +5,10 @@ Runs terraform apply
 ## Example Usage
 
 ```yaml
-  - uses: Chia-Network/actions/terraform/apply@main
+  - uses: Chinilla/actions/terraform/apply@main
     with:
-      workspace: mainnet-us-west-2
-      varfile: vars/mainnet-us-west-2.tfvars
+      workspace: vanillanet-us-west-2
+      varfile: vars/vanillanet-us-west-2.tfvars
       terraform_dir: terraform
 ```
 

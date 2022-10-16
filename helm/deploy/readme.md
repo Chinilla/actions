@@ -3,7 +3,7 @@
 Deploys a helm chart to a k8s cluster.
 
 ```yaml
-- uses: Chia-Network/actions/helm/deploy@main
+- uses: Chinilla/actions/helm/deploy@main
   with:
     namespace: k8s-namespace
     app_name: "my-k8s-app-name"

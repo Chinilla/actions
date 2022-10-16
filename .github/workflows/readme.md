@@ -15,5 +15,5 @@ on:
 
 jobs:
   package:
-    uses: Chia-Network/actions/.github/workflows/docker-build.yaml@main
+    uses: Chinilla/actions/.github/workflows/docker-build.yaml@main
 ```
