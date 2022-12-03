@@ -11,12 +11,15 @@ Runs an ansible playbook against an inventory of hosts
 ### clean-workspace
 Cleans the current workspace prior to running the checkout action, to ensure the job starts with a clean slate.
 
+### create-venv
+Creates a venv in the runner temporary path that will be removed upon completion of the job.
+
 ### enforce-semver
 Ensures that the checked-out code has a GitHub tag that complies with semantic versioning in format `Major.minor.patch`. Supports up to three numeric digits per release type.
 
 ### git-mark-workspace-safe
 Marks the GitHub workspace as safe. See [bug report](https://github.com/actions/checkout/issues/760)
-The underlying checkout issue is resolved, but if you need to commit back to a repo, especially in a container, this action is still needed.
+The underlying checkout issue is resolved, but if you need to commit back to a repository, especially in a container, this action is still needed.
 
 ### git-ssh-to-https
 Sets up the global git config to replace any ssh clone URLs with HTTPS URLs. This must be used after the checkout code action.
